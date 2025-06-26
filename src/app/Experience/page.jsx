@@ -88,8 +88,8 @@ export default function ExperienceAndSkills() {
   };
 
   return (
-    <section id="experience-and-skills" ref={ref} className="p-30 py-20 bg-[#0f0f0f] text-white">
-      <div className="container mx-auto px-6">
+    <section id="experience-and-skills" ref={ref} className="md:p-30 py-20 bg-[#0f0f0f] text-white">
+      <div className="max-w-7xl mx-auto px-6  sm:px-6 md:px-10">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -112,7 +112,7 @@ export default function ExperienceAndSkills() {
           variants={container}
           initial="hidden"
           animate={controls}
-          className="flex flex-col md:flex-row gap-12"
+          className="flex flex-col lg:flex-row gap-12"
         >
           {/* Experience Section - 3/4 */}
           <div className="md:w-3/4 space-y-10">
@@ -169,12 +169,12 @@ export default function ExperienceAndSkills() {
               <h3 className="text-2xl font-semibold mb-4">Skills</h3>
               {skills.map((group, index) => (
                 <div key={index}>
-                  <h4 className="text-lg font-bold mb-2">{group.category}</h4>
+                  <h4 className="font-sans text-lg font-bold mb-2 mt-5">{group.category}</h4>
                   <div className="flex flex-wrap gap-2">
                     {group.items.map((skill, skillIndex) => (
                       <motion.span
                         key={skillIndex}
-                        className="inline-block px-3 py-1.5 text-sm rounded-xl bg-black-800 text-red-400 border border-gray-800"
+                        className="font-sans inline-block px-3 py-1.5 text-sm rounded-xl bg-black-800 text-red-400 border border-gray-800"
                       >
                         {skill}
                       </motion.span>
@@ -186,7 +186,7 @@ export default function ExperienceAndSkills() {
               <div className="bg-white px-19"></div>
             {/* Education */}
             <motion.div variants={item}>
-              <h3 className="text-2xl font-semibold mb-4">Education</h3>
+              <h3 className="text-2xl font-semibold mb-4 ">Education</h3>
               <div className="space-y-4">
                 {education.map((edu, index) => (
                   <div

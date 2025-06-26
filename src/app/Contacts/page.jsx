@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { FaEnvelope, FaPhoneAlt, FaGithub, FaLinkedin } from "react-icons/fa";
-
+import { FiChevronUp } from "react-icons/fi";
 const contactInfo = [
   {
     type: "Email",
@@ -52,6 +52,10 @@ export default function Contact() {
       opacity: 1,
       transition: { duration: 0.6, ease: "easeOut" },
     },
+  };
+   const scrollToNext = () => {
+    const nextSection = document.getElementById("hero" ) || document.body;
+    nextSection?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -105,6 +109,15 @@ export default function Contact() {
           </motion.a>
         ))}
       </motion.div>
+        <div className=" bottom-8 left-0 right-0 flex justify-center z-20">
+              <button
+                onClick={scrollToNext}
+                className="animate-bounce p-3 rounded-full bg-white/10 hover:bg-white/20 transition"
+                aria-label="Scroll to next section"
+              >
+                <FiChevronUp className="text-white text-2xl" />
+              </button>
+            </div>
     </section>
   );
 }

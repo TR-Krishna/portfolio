@@ -83,7 +83,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" ref={ref} className="px-6 md:px-20 py-20 bg-[#0f0f0f] text-white">
+    <section id="projects" ref={ref} className="px-4 sm:px-6 md:px-20 py-20 bg-[#0f0f0f] text-white">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={controls}
@@ -104,27 +104,34 @@ export default function Projects() {
         variants={container}
         initial="hidden"
         animate={controls}
-        className="space-y-28"
+        className=" space-y-28"
       >
         {projects.map((project) => (
           <motion.div
             key={project.id}
             variants={item}
-            className="font-sans flex flex-col md:flex-row items-center gap-10 pl-20 border-1 border-gray-700 p-8 rounded-xl bg-black-900 shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            className="font-sans flex flex-col md:flex-row items-center gap-10 border border-gray-700 p-6 sm:p-8 rounded-xl bg-black-900 shadow-lg hover:shadow-2xl transition-shadow duration-300"
           >
             {/* Left: Text */}
             <div className="md:w-1/2">
+             <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
               <h3 className="font-sans text-3xl font-semibold mb-3">{project.title}</h3>
-              <p className="text-gray-300 mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-3">
-                {project.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="inline-block px-3 py-1.5 text-sm rounded-xl bg-black-800 text-red-400 border border-gray-800"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              </a>
+              <p className="font-sans text-gray-300 mb-4">{project.description}</p>
+              <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-3">
+            {project.tags.map((tag, index) => (
+              <span
+                key={index}
+                className="inline-block px-3 py-1.5 text-sm rounded-xl bg-black-800 text-red-400 border border-gray-800"
+              >
+                {tag}
+              </span>
+            ))}
               </div>
               <p className="text-sm text-gray-400 italic mb-2">{project.result}</p>
               {project.link && (
@@ -140,15 +147,23 @@ export default function Projects() {
             </div>
 
             {/* Right: Image */}
-            <div className="md:w-1/2 flex justify-center">
+           
+            <div className="w-full md:w-1/2 flex justify-center">
+             <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
               {project.image && (
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full max-w-md rounded-xl shadow-xl object-contain"
+                  className="rounded-xl shadow-xl object-contain w-full"
                 />
               )}
+              </a>
             </div>
+            
           </motion.div>
         ))}
       </motion.div>

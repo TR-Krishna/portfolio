@@ -38,7 +38,7 @@ const projects = [
     tags: ["Figma", "Responsive Design", "UI/UX"],
     link: "https://sbce.ac.in/",
     result: "Internship Project",
-    image: "/SBCET.svg"
+    image: "/sbce.svg"
   },
   {
     id: 5,

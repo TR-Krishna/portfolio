@@ -36,7 +36,7 @@ const projects = [
     title: "College Website Revamp",
     description: "Redesigned the official website of the college as part of an internship with Obsidyne. Focused on enhancing user experience, improving navigation flow, and creating a consistent design system across pages. Built responsive layouts tailored for both mobile and desktop users using Figma. Collaborated with developers and stakeholders to ensure brand alignment and functional accessibility throughout the design.",
     tags: ["Figma", "Responsive Design", "UI/UX"],
-    link: "http://sbcemhjk.vercel.app",
+    link: "https://sbce.ac.in/",
     result: "Internship Project",
     image: "/SBCET.svg"
   },

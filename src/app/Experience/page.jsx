@@ -52,14 +52,8 @@ const education = [
     institution: "Kendriya Vidyalaya NAD Aluva",
     degree: "Higher Secondary Education",
     period: "2020 - 2022",
-    details: "Grade 12: 95%",
-  },
-  {
-    institution: "Kendriya Vidyalaya NAD Aluva",
-    degree: "Secondary Education",
-    period: "2020",
-    details: "Grade 10: 95%",
-  },
+    details: "95.8%",
+  }
 ];
 
 export default function ExperienceAndSkills() {

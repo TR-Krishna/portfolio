@@ -36,7 +36,7 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen bg-blue-800 text-white font-sans">
+    <main className="min-h-screen bg-[#0f0f0f] text-white font-sans">
       <Spline
         scene="https://prod.spline.design/sEv3weyx1fdCEdCd/scene.splinecode"
         className="absolute inset-0 w-full h-full object-cover z-0"
